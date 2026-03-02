@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
 
 export const About = () => {
+  const profileImage = `${import.meta.env.BASE_URL}profile.jpeg`;
   const strengths = [
     'Python Programming',
     'Frontend Development',
@@ -23,7 +24,7 @@ export const About = () => {
           <div className="relative w-full aspect-[4/5] md:aspect-square">
             <div className="absolute inset-0 bg-muted rounded-[20px] overflow-hidden">
               <img
-                src="/profile.jpeg"
+                src={profileImage}
                 alt="Bharat Portrait"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

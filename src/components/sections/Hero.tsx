@@ -5,6 +5,8 @@ import { RoleRotation } from '../hero/RoleRotation';
 import { Link } from 'react-router-dom';
 
 export const Hero = () => {
+  const profileImage = `${import.meta.env.BASE_URL}profile.jpeg`;
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-32 md:pt-40 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]">
       <div className="container-padding max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
@@ -64,7 +66,7 @@ export const Hero = () => {
             {/* The Image */}
             <div className="w-full h-full bg-dark rounded-[40px] overflow-hidden border border-white/10 shadow-elevation2 relative z-10">
               <img 
-                src="/profile.jpeg" 
+                src={profileImage}
                 alt="Bharat - Founder & Engineer"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

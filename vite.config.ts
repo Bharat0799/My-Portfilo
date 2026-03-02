@@ -7,7 +7,7 @@ import { miaodaDevPlugin } from "miaoda-sc-plugin";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/My-Portfolio/',
+  base: '/My-Portfilo/',
   plugins: [react(), svgr({
       svgrOptions: {
         icon: true, exportType: 'named', namedExport: 'ReactComponent', }, }), miaodaDevPlugin()],

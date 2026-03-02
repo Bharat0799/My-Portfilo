@@ -1,23 +1,56 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Github, ExternalLink, ArrowUpRight } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
-const projects = [
+const featuredProjects = [
   {
     title: 'Terra Local',
-    description: 'Premium Organic E-commerce Platform with structured SPA architecture, dynamic search, filter + sort functionality, state-based cart logic, and multi-step checkout.',
-    tags: ['React', 'Tailwind', 'E-commerce', 'UX'],
-    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_df1449d5-39bf-4567-bc34-50becada84be.jpg',
+    subtitle: 'Premium Organic E-commerce Platform',
+    tags: ['HTML', 'CSS', 'JavaScript', 'SPA Architecture'],
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_f90c097d-416b-4c17-9524-cd5201714f73.jpg',
     github: 'https://github.com/Bharat0799/Terra-Local-Website',
     live: '#'
   },
   {
     title: 'Smart ID Reissue System',
-    description: 'Admin-controlled ID management platform featuring an admin dashboard, approval workflow logic, role-based access, and validation systems.',
-    tags: ['Admin Panel', 'Node.js', 'Security', 'React'],
-    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_5d35a635-3cfd-4f49-8363-b8ea65f6cb1d.jpg',
+    subtitle: 'Admin-Controlled ID Management Platform',
+    tags: ['Workflow Logic', 'Validation System', 'Role-based Access'],
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_f17a8850-0a2c-4483-9593-c1187866880f.jpg',
     github: 'https://github.com/Bharat0799',
+    live: '#'
+  },
+  {
+    title: 'AI Chatbot',
+    subtitle: 'Intelligent Conversational Assistant',
+    tags: ['AI Integration', 'API Handling', 'Real-time Responses'],
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_8078c134-78dc-4d80-96a2-6b6c93d2bce0.jpg',
+    github: '#',
+    live: '#'
+  },
+  {
+    title: 'Student Result Management System',
+    subtitle: 'Console-Based Academic Record System',
+    tags: ['Python', 'Data Handling', 'Condition Logic'],
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_2b43518f-2863-43e7-a91a-201756ecaea4.jpg',
+    github: '#',
+    live: '#'
+  },
+  {
+    title: 'File Organizer Script',
+    subtitle: 'Automated File Structuring Tool',
+    tags: ['Python', 'OS Module', 'Automation'],
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_71eee6bb-65ab-4a1a-95b4-de4bfc4171f1.jpg',
+    github: '#',
+    live: '#'
+  },
+  {
+    title: 'Portfolio Website',
+    subtitle: 'Structured Personal Engineering Portfolio',
+    tags: ['UI Architecture', 'Responsive Design'],
+    image: 'https://miaoda-site-img.s3cdn.medo.dev/images/KLing_638001b8-713c-4407-a07e-09e4e8b379d0.jpg',
+    github: '#',
     live: '#'
   }
 ];
@@ -26,30 +59,31 @@ export const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-background scroll-mt-24 md:scroll-mt-32">
       <div className="container-padding max-w-[1200px] mx-auto">
-        <div className="flex items-end justify-between mb-16">
-          <div>
+        <div className="flex flex-col mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
               Selected <span className="text-primary">Works</span>
             </h2>
-            <p className="text-muted-foreground max-w-[500px] text-lg">
-              A collection of architectural challenges and product solutions I've built from the ground up.
+            <p className="text-muted-foreground max-w-[600px] text-lg leading-relaxed">
+              A curated collection of products built with structure, scalability, and performance in mind.
             </p>
-          </div>
-          <a href="https://github.com/Bharat0799" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 group text-foreground font-bold hover:underline decoration-primary transition-all underline-offset-4">
-            View GitHub
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-primary" />
-          </a>
+          </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+          {featuredProjects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -8 }}
               className="bg-white/70 dark:bg-white/5 backdrop-blur-md rounded-[24px] overflow-hidden shadow-elevation1 border border-border group"
             >
               {/* Image Container */}
@@ -58,17 +92,17 @@ export const Projects = () => {
                 <motion.img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-dark/20 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
               {/* Content */}
-              <div className="p-7 flex flex-col gap-6">
+              <div className="p-8 flex flex-col gap-6">
                 <div>
-                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm line-clamp-2 leading-relaxed">
-                    {project.description}
+                  <h3 className="text-2xl font-bold mb-2 font-heading">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm line-clamp-1 leading-relaxed">
+                    {project.subtitle}
                   </p>
                 </div>
 
@@ -84,19 +118,38 @@ export const Projects = () => {
                 </div>
 
                 <div className="flex items-center gap-4 pt-2">
-                  <a href={project.github} className="flex items-center gap-2 text-sm font-semibold hover:text-primary transition-colors">
-                    <Github className="w-4 h-4" />
+                  <a href={project.github} className="flex items-center gap-2 text-xs font-bold hover:text-primary transition-colors">
+                    <Github className="w-3.5 h-3.5" />
                     Code
                   </a>
-                  <a href={project.live} className="flex items-center gap-2 text-sm font-semibold hover:text-primary transition-colors">
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
+                  <a href={project.live} className="flex items-center gap-2 text-xs font-bold hover:text-primary transition-colors">
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    Demo
                   </a>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 flex justify-center"
+        >
+          <Button 
+            variant="outline" 
+            className="border-foreground text-foreground hover:bg-foreground hover:text-white transition-all duration-300 rounded-[12px] px-8 py-6 text-lg h-auto font-bold group" 
+            asChild
+          >
+            <Link to="/projects">
+              View More Projects
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+        </motion.div>
       </div>
     </section>
   );

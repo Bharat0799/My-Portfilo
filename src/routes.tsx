@@ -1,5 +1,6 @@
 import Home from './pages/Home';
 import WorkWithMe from './pages/WorkWithMe';
+import ProjectsPage from './pages/ProjectsPage';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -24,6 +25,11 @@ const routes: RouteConfig[] = [
     name: 'Work With Me HTML',
     path: '/work-with-me.html',
     element: <WorkWithMe />
+  },
+  {
+    name: 'Projects',
+    path: '/projects',
+    element: <ProjectsPage />
   }
 ];
 

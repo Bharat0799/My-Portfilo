@@ -47,6 +47,33 @@ export const Hero = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           className="relative hidden md:flex justify-center items-center h-[500px]"
         >
+          {/* Photo Container with Abstract Blob feel */}
+          <motion.div
+            animate={{
+              y: [0, -20, 0],
+              rotate: [0, 2, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="relative w-[380px] h-[480px] z-10"
+          >
+            {/* The Image */}
+            <div className="w-full h-full bg-dark rounded-[40px] overflow-hidden border border-white/10 shadow-elevation2 relative z-10">
+              <img 
+                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_c04ce22b-b3ae-4658-941d-8aeb64b7313f.jpg" 
+                alt="Bharat - Founder & Engineer"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
+            
+            {/* Abstract Glow Background */}
+            <div className="absolute inset-0 bg-primary/20 blur-[60px] rounded-full -z-10 scale-90 translate-y-4" />
+            <div className="absolute -inset-4 border border-primary/20 rounded-[48px] -z-10" />
+          </motion.div>
+          
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-24 h-24 border border-border rounded-full flex items-center justify-center animate-pulse">
             <div className="w-2 h-2 bg-primary rounded-full" />

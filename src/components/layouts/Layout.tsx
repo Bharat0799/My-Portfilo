@@ -18,6 +18,7 @@ export const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background selection:bg-primary selection:text-dark relative">
+      <div className="noise-overlay" />
       <motion.div
         className="fixed top-0 left-0 right-0 h-[3px] bg-primary z-[2000] origin-left"
         style={{ scaleX }}

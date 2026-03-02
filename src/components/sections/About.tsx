@@ -11,14 +11,14 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-background relative overflow-hidden scroll-mt-24 md:scroll-mt-32">
+    <section id="about" className="section-padding bg-background section-light relative overflow-hidden scroll-mt-24 md:scroll-mt-32">
       <div className="container-padding max-w-[1200px] mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="glass-card rounded-[24px] p-8 md:p-16 flex flex-col md:grid md:grid-cols-2 gap-12 items-center"
+          className="glass-card rounded-[24px] p-8 md:p-16 flex flex-col md:grid md:grid-cols-2 gap-12 items-center card-elevation group"
         >
           {/* Left: Image Placeholder */}
           <div className="relative w-full aspect-[4/5] md:aspect-square">

@@ -57,7 +57,7 @@ const featuredProjects = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="section-padding bg-background scroll-mt-24 md:scroll-mt-32">
+    <section id="projects" className="section-padding bg-background section-light scroll-mt-24 md:scroll-mt-32">
       <div className="container-padding max-w-[1200px] mx-auto">
         <div className="flex flex-col mb-16">
           <motion.div
@@ -83,8 +83,7 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="bg-white/70 dark:bg-white/5 backdrop-blur-md rounded-[24px] overflow-hidden shadow-elevation1 border border-border group"
+              className="bg-white/70 dark:bg-white/5 backdrop-blur-md rounded-[24px] overflow-hidden border border-border card-elevation group"
             >
               {/* Image Container */}
               <div className="aspect-[16/10] relative overflow-hidden">

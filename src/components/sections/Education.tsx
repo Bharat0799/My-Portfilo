@@ -28,7 +28,7 @@ const education = [
 
 export const Education = () => {
   return (
-    <section id="education" className="section-padding bg-background scroll-mt-24 md:scroll-mt-32">
+    <section id="education" className="section-padding bg-background section-light scroll-mt-24 md:scroll-mt-32">
       <div className="container-padding max-w-[1000px] mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
           <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
@@ -50,7 +50,7 @@ export const Education = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-[20px] p-8 md:p-10 shadow-elevation1 border border-border relative overflow-hidden group"
+              className="bg-white rounded-[20px] p-8 md:p-10 border border-border relative overflow-hidden card-elevation group"
             >
               {/* Accents */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[100px] -z-0 group-hover:bg-primary/10 transition-colors" />

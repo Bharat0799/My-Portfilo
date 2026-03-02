@@ -35,7 +35,7 @@ export const Contact = () => {
   }
 
   return (
-    <section id="contact" className="section-padding bg-background relative scroll-mt-24 md:scroll-mt-32">
+    <section id="contact" className="section-padding bg-background section-light relative scroll-mt-24 md:scroll-mt-32">
       <div className="container-padding max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
           {/* Left Side: Info */}
@@ -91,7 +91,7 @@ export const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-[32px] p-8 md:p-12 shadow-elevation2 border border-border"
+            className="bg-white rounded-[32px] p-8 md:p-12 border border-border card-elevation"
           >
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

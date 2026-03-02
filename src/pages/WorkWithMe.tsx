@@ -29,7 +29,7 @@ const WorkWithMe = () => {
   return (
     <Layout>
       {/* Hero Block (60vh) */}
-      <section className="relative min-h-[60vh] flex items-center pt-32 md:pt-40 bg-background">
+      <section className="relative min-h-[60vh] flex items-center pt-32 md:pt-40 bg-background section-light">
         <div className="container-padding max-w-[1200px] mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -59,7 +59,7 @@ const WorkWithMe = () => {
       </section>
 
       {/* WHAT I BRING SECTION */}
-      <section className="section-padding bg-dark text-white">
+      <section className="section-padding bg-dark text-white section-dark">
         <div className="container-padding max-w-[1200px] mx-auto">
           <h2 className="text-sm uppercase tracking-[4px] text-primary font-bold mb-16 text-center">WHAT I BRING</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -70,7 +70,7 @@ const WorkWithMe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/[0.04] border border-white/10 rounded-[24px] p-8 md:p-10 hover:border-primary/40 transition-all duration-300"
+                className="bg-white/[0.04] border border-white/10 rounded-[24px] p-8 md:p-10 card-elevation group"
               >
                 <h3 className="text-2xl font-bold mb-6 font-heading">{card.title}</h3>
                 <ul className="space-y-4">
@@ -88,7 +88,7 @@ const WorkWithMe = () => {
       </section>
 
       {/* OPPORTUNITIES SECTION */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-background section-light">
         <div className="container-padding max-w-[1200px] mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -99,7 +99,7 @@ const WorkWithMe = () => {
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-12 tracking-tight">Currently Open To</h2>
             <div className="flex flex-col items-center gap-6 max-w-[600px] mx-auto">
               {opportunities.map((item) => (
-                <div key={item} className="w-full p-6 bg-muted/30 border border-border rounded-xl text-xl font-medium hover:bg-white hover:shadow-elevation1 transition-all duration-300">
+                <div key={item} className="w-full p-6 bg-muted/30 border border-border rounded-xl text-xl font-medium card-elevation group">
                   {item}
                 </div>
               ))}
@@ -109,7 +109,7 @@ const WorkWithMe = () => {
       </section>
 
       {/* CONTACT BLOCK */}
-      <section className="py-20 bg-background border-t border-border">
+      <section className="py-20 bg-background border-t border-border section-light">
         <div className="container-padding max-w-[1200px] mx-auto flex flex-col items-center">
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             <a href="mailto:hello@premiumportfolio.com" className="flex items-center gap-3 text-lg font-bold hover:text-primary transition-colors">

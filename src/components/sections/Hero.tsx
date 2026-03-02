@@ -2,18 +2,10 @@ import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { RoleRotation } from '../hero/RoleRotation';
 import { Link } from 'react-router-dom';
-import { HeroBackground3D } from '../hero/HeroBackground3D';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-32 md:pt-40">
-      {/* 3D Background */}
-      <HeroBackground3D />
-      
-      {/* Background Glows */}
-      <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full z-0" />
-      <div className="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-glow/15 blur-[150px] rounded-full z-0" />
-      
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-32 md:pt-40 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]">
       <div className="container-padding max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
         {/* Left Column */}
         <motion.div

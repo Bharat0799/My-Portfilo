@@ -29,7 +29,7 @@ import { Cloud } from 'lucide-react';
 
 export const Skills = () => {
   return (
-    <section id="skills" className="section-padding bg-dark text-white relative scroll-mt-24 md:scroll-mt-32">
+    <section id="skills" className="section-padding bg-dark text-white section-dark relative scroll-mt-24 md:scroll-mt-32">
       <div className="container-padding max-w-[1200px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <motion.div
@@ -58,12 +58,7 @@ export const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ 
-                y: -6, 
-                borderColor: 'rgba(182, 255, 0, 0.5)',
-                boxShadow: '0 20px 60px rgba(182, 255, 0, 0.15)'
-              }}
-              className="bg-white/[0.04] border border-primary/15 rounded-[20px] p-8 transition-all duration-300 group"
+              className="bg-white/[0.04] border border-primary/15 rounded-[20px] p-8 card-elevation group"
             >
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-dark transition-all duration-300">
                 <skill.icon className="w-6 h-6 text-primary group-hover:text-inherit" />

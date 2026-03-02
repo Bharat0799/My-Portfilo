@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Float, MeshDistortMaterial, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
@@ -10,7 +10,7 @@ const OrganicShape = () => {
   const { viewport } = useThree();
 
   // Mouse move handler
-  React.useEffect(() => {
+  useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       setMousePos({
         x: (event.clientX / window.innerWidth) * 2 - 1,

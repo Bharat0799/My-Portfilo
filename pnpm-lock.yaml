@@ -7,13 +7,13 @@ settings:
 catalogs:
   default:
     '@react-three/drei':
-      specifier: 9.122.0
+      specifier: 'catalog:'
       version: 9.122.0
     '@react-three/fiber':
-      specifier: 8.18.0
+      specifier: 'catalog:'
       version: 8.18.0
     three:
-      specifier: 0.180.0
+      specifier: 'catalog:'
       version: 0.180.0
 
 importers:

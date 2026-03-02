@@ -4,7 +4,7 @@
 
 **Application Name:** Premium Portfolio
 
-**Application Description:** A single-page personal portfolio website for a funded startup founder, featuring a premium, restrained, high-contrast design with lime accents and intentional minimalism, with a floating black pill-shaped navigation bar.
+**Application Description:** A single-page personal portfolio website for a funded startup founder, featuring a premium, restrained, high-contrast design with lime accents and intentional minimalism, with a floating black pill-shaped navigation bar and subtle 3D animated background element.
 
 ## Design System Specifications
 
@@ -51,6 +51,7 @@
 - Hover Elevation: 0 20px 60px rgba(182,255,0,0.15)
 
 ### Z-Index Layering System
+- 3D background canvas: z-index -1
 - Hero background glows: z-index 0
 - Decorative blob: z-index 1
 - Main content: z-index 2
@@ -67,6 +68,71 @@
 - Respect prefers-reduced-motion for accessibility
 - No bounce effects or elastic easing
 - Transform + shadow animate together
+
+## 3D Background Animation System
+
+### Implementation Approach
+- Use Three.js for 3D rendering
+- Full-screen canvas element positioned behind hero section
+- Fixed positioning with z-index -1
+- Canvas must not interfere with content interaction
+
+### 3D Object Specifications
+- Geometry: Low-poly icosahedron or sphere
+- Surface material: Matte dark (#0E0E12 or very dark grey)
+- Edge glow: Subtle lime (#B6FF00) at low opacity (0.15–0.25)
+- No bright gradients
+- No neon effects
+- No reflections
+
+### Lighting Setup
+- Ambient light: Very subtle, low intensity (0.2–0.3)
+- Directional light: Soft, positioned to create subtle depth
+- Rim light: Lime accent (#B6FF00) at very low intensity for edge definition
+- No sharp highlights
+- No color-changing lights
+
+### Animation Parameters
+- Rotation speed: Very slow (0.001–0.003 radians per frame)
+- Rotation axis: Y-axis primary
+- Vertical float: translateY range ±15px
+- Float duration: 8–12 seconds
+- Easing: ease-in-out
+- Loop: Infinite
+
+### Parallax Effect
+- Mouse move parallax: Maximum 5px shift
+- Smooth interpolation
+- Subtle depth perception
+- No exaggerated perspective changes
+
+### Performance Requirements
+- Use requestAnimationFrame for smooth rendering
+- Limit geometry complexity (low polygon count)
+- Maintain 60 FPS target
+- Optimize for mobile devices
+- Implement proper cleanup on unmount
+
+### Accessibility Compliance
+- Detect prefers-reduced-motion media query
+- When enabled: Stop or significantly reduce animation
+- Fallback: Static or minimal movement state
+
+### Visual Constraints
+- Lime glow coverage: Maximum 10–15% of viewport
+- No full bright backgrounds
+- No background color changes
+- No flashing or flickering
+- No fast motion
+- Animation must feel calm and premium
+
+### Aesthetic Guidelines
+- Apple-style subtle motion
+- Founder-level personal brand aesthetic
+- Intelligent engineering feel
+- NOT gaming/crypto/startup template style
+- NOT animation showcase
+- Must not distract from content
 
 ## Navigation System
 
@@ -154,6 +220,7 @@
 - Background: #F8F9F6 with two asymmetric radial lime glows
   - radial-gradient(circle at 30% 40%, rgba(182,255,0,0.35), transparent 45%)
   - radial-gradient(circle at 80% 70%, rgba(139,255,176,0.25), transparent 50%)
+- 3D animated background canvas positioned behind all content (z-index -1)
 - Two-column grid layout
 - Left column:
   - Name label: 14px uppercase, letter-spacing 2px, secondary text color
@@ -403,12 +470,15 @@
 - Support prefers-reduced-motion preference
 - Semantic HTML structure
 - Meaningful alt text for images
+- 3D animation must respect prefers-reduced-motion
 
 ## Performance Requirements
 - Use next-gen image formats (WebP/AVIF)
 - Implement lazy loading for offscreen images
 - Minimize JavaScript bundle size
 - Defer nonessential scripts
+- Optimize Three.js rendering performance
+- Maintain 60 FPS for 3D animation
 
 ## Design Constraints
 - No pure white (#FFFFFF) or pure black (#000000)
@@ -423,12 +493,14 @@
 - No glassmorphism on navigation
 - No gradients on navigation
 - No particles
+- 3D background must be subtle and non-distracting
 
 ## Interaction Tone Rules
 - Maintain premium, restrained aesthetic
 - Lime accent limited to 10–15% of viewport
 - No cluttered screenshots
 - No heavy graphics
+- 3D animation must feel calm and premium
 
 ## Optional Premium Enhancements
 - Thin 3px lime scroll progress bar

@@ -2,10 +2,14 @@ import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { RoleRotation } from '../hero/RoleRotation';
 import { Link } from 'react-router-dom';
+import { HeroBackground3D } from '../hero/HeroBackground3D';
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-32 md:pt-40">
+      {/* 3D Background */}
+      <HeroBackground3D />
+      
       {/* Background Glows */}
       <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full z-0" />
       <div className="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-glow/15 blur-[150px] rounded-full z-0" />
@@ -49,25 +53,8 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="relative hidden md:flex justify-center items-center"
+          className="relative hidden md:flex justify-center items-center h-[500px]"
         >
-          {/* Abstract Floating Blob */}
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 2, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="w-[400px] h-[400px] bg-dark rounded-[40% 60% 70% 30% / 40% 50% 60% 50%] relative shadow-glow"
-          >
-            <div className="absolute inset-0 border-2 border-primary/30 rounded-[inherit] scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent rounded-[inherit]" />
-          </motion.div>
-          
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-24 h-24 border border-border rounded-full flex items-center justify-center animate-pulse">
             <div className="w-2 h-2 bg-primary rounded-full" />

@@ -37,7 +37,10 @@
     "@radix-ui/react-toggle": "^1.1.10",
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@react-three/drei": "catalog:",
+    "@react-three/fiber": "catalog:",
     "@supabase/supabase-js": "^2.76.1",
+    "@types/three": "^0.183.1",
     "axios": "^1.13.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -68,6 +71,7 @@
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-intersect": "^2.2.0",
+    "three": "catalog:",
     "vaul": "^1.1.2",
     "video-react": "^0.16.0",
     "zod": "^3.25.76"
@@ -82,11 +86,11 @@
     "@typescript/native-preview": "7.0.0-dev.20251103.1",
     "@vitejs/plugin-react": "^5.1.2",
     "autoprefixer": "^10.4.21",
+    "miaoda-sc-plugin": "^1.0.4",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.11",
     "typescript": "~5.9.3",
     "vite": "npm:rolldown-vite@latest",
-    "vite-plugin-svgr": "^4.5.0",
-    "miaoda-sc-plugin": "^1.0.4"
+    "vite-plugin-svgr": "^4.5.0"
   }
 }

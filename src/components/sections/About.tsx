@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -24,7 +23,7 @@ export const About = () => {
           <div className="relative w-full aspect-[4/5] md:aspect-square">
             <div className="absolute inset-0 bg-muted rounded-[20px] overflow-hidden">
               <img
-                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_c04ce22b-b3ae-4658-941d-8aeb64b7313f.jpg"
+                src="/profile.jpeg"
                 alt="Bharat Portrait"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

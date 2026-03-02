@@ -1,3 +1,4 @@
+
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { RoleRotation } from '../hero/RoleRotation';
@@ -63,7 +64,7 @@ export const Hero = () => {
             {/* The Image */}
             <div className="w-full h-full bg-dark rounded-[40px] overflow-hidden border border-white/10 shadow-elevation2 relative z-10">
               <img 
-                src="https://miaoda-site-img.s3cdn.medo.dev/images/KLing_c04ce22b-b3ae-4658-941d-8aeb64b7313f.jpg" 
+                src="/profile.jpeg" 
                 alt="Bharat - Founder & Engineer"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />

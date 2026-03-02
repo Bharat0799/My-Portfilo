@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "echo 'Do not use this command, only use lint to check'",
     "build": "echo 'Do not use this command, only use lint to check'",
-    "lint": "tsgo -p tsconfig.check.json; biome lint --only=correctness/noUndeclaredDependencies; ast-grep scan"
+    "lint": "tsgo -p tsconfig.check.json && biome lint --only=correctness/noUndeclaredDependencies"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

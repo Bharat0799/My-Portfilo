@@ -1,0 +1,126 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 80 15% 97%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 77 100% 50%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 80 15% 92%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 80 15% 92%;
+    --muted-foreground: 0 0% 30%;
+    --accent: 77 100% 50%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 77 100% 50%;
+    --radius: 12px;
+    --sidebar-background: 80 15% 95%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 77 100% 50%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 77 100% 50%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 77 100% 50%;
+  }
+
+  .dark {
+    --background: 240 15% 6%;
+    --foreground: 80 15% 97%;
+    --card: 240 15% 10%;
+    --card-foreground: 80 15% 97%;
+    --popover: 240 15% 10%;
+    --popover-foreground: 80 15% 97%;
+    --primary: 77 100% 50%;
+    --primary-foreground: 0 0% 7%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 80 15% 97%;
+    --muted: 240 15% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 77 100% 50%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 80 15% 97%;
+    --border: 240 15% 15%;
+    --input: 240 15% 15%;
+    --ring: 77 100% 50%;
+    --sidebar-background: 240 15% 8%;
+    --sidebar-foreground: 80 15% 97%;
+    --sidebar-primary: 77 100% 50%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 77 100% 50%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 240 15% 15%;
+    --sidebar-ring: 77 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-[12px] shadow-elevation1;
+  }
+  .dark .glass-card {
+    @apply bg-white/5 backdrop-blur-[12px] border-white/10;
+  }
+  .lime-pill {
+    @apply bg-foreground text-primary px-[14px] py-[6px] rounded-[8px] font-medium inline-block;
+  }
+  .section-padding {
+    @apply py-[80px] md:py-[120px];
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .container-padding {
+    @apply px-[24px] md:px-[80px];
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
